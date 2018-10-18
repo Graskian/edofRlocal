@@ -17,11 +17,11 @@ ebaseFilterEU <- function(locs="europe",spc="all",days=30){
   
   dat <- data.frame(obsDT='N',comName='N',howMany=0,locName='N',country='N')[-1,]
   if(locs=="europe"){
-    locs <- c('DK','SE','NO','FR','DE')
+    locs <- c('DK','SE','NO','FR','DE','NL','GB')
   }
   
   if(spc == "all"){
-    spc <- c("sooshe","manshe","lcspet","yebwar3","palwar5","duswar")
+    spc <- c("sooshe","manshe","lcspet","yebwar3","palwar5","duswar","refblu","radwar1")
   }
   
   for(i in 1:length(locs)){
@@ -53,5 +53,7 @@ engtodan <- function(x){
   x <- gsub('Manx Shearwater','Almindelig Skråpe',x)
   x <- gsub('Sooty Shearwater','Sodfarvet Skråpe',x)
   x <- gsub('Pallas\'s Leaf Warbler','Fuglekongesanger',x)
+  x <- gsub('Red-flanked Bluetail','Blåstjert',x)
+  x <- gsub('Radde\'s Warbler','Schwarz Løvsanger',x)
   
 }
