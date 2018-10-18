@@ -1,6 +1,6 @@
 library(rebird)
 
-ebaseFilter <- function(loc,species,back=30){
+ebaseFilter <- function(loc,species=NULL,back=30){
   
   dat <- ebirdregion(loc=loc,species=species,back=back,provisional=T)
   if(dim(dat)[1]==0){
